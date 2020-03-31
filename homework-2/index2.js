@@ -1,4 +1,4 @@
-// "use strict";
+ "use strict";
 
 // // const arr = [];
 // // console.log(arr);
@@ -145,5 +145,182 @@
 //                 total += matrix[i][j];
 //               }
 //             }
-//             console.log(total);
+// //             console.log(total);
+
+// // ========================= занятие 2 ================
+       
+// let a = 5;
+// let b = a;
+// console.log(a);
+// console.log(b);
+
+// a = 10;
+// console.log(a);
+// console.log(b);
+
+// let lastName = "Kovalova";
+// let newlastName = lastName;
+
+// console.log(lastName);
+// console.log(newlastName);
+
+// lastName = 10;
+// console.log(lastName);
+// console.log(newlastName);
+
+// const units = ["alfa", "beta", "gamma"];
+// const newUnits = units;
+// console.log(units);
+// console.log(newUnits);
+
+// units[0] = "1";
+// console.log(units);
+// console.log(newUnits);
+
+// units.push("delta");
+// console.log(units);
+// console.log(newUnits);      
+
+// newUnits.unshift("epsilon");
+// console.log(newUnits); 
+// console.log(units);
+
+// units.pop("");
+// console.log(units);
+// console.log(newUnits);
+// newUnits.pop();
+// console.log(newUnits); 
+// console.log(units);
+
+// newUnits.shift();
+// console.log(units);
+// console.log(newUnits);
+
+// console.log(units.join(""));
+// console.log(units.join(", "));
+// console.log(units.join(" - "));
+// console.log(units.join("xy"));
+
+// const msg = "Welcome to my world!))";
+// console.log(msg.split(" "));
+// console.log(msg.split("m"));
+// console.log(msg.split(""));
+
+// const msg1 = "Welcome,to,my,world!))";
+// console.log(msg1.split(","));
+
+// console.log(units.indexOf("beta"));
+// console.log(units.indexOf("b"));
+
+// console.log(msg.includes("to"));
+// console.log(msg.includes("WORLD"));
+// console.log(msg.includes("world"));
+// console.log(msg.includes("!"));
+// console.log(msg.includes("t"));
+       
+// // const fruit = "apple";
+// // if (fruit === "apple" || fruit === "strawberry") {
+// //     console.log("its a red fruit");
+// // }
+
+// // const redFruits = ["apple", "strawberry"];
+// // const fruit = prompt("Enter a fruit");
+
+// // if (redFruits.includes(fruit)) {
+// //     console.log("its a red fruit");
+// // } else{
+// //     console.log("its not a red fruit");
+// // }
+
+const numList = [0, 1, 2, 3, 4, 5, 6, 7];
+console.log(numList.slice(0, 3));
+console.log(numList.slice(1, 2));
+console.log(numList.slice(1, 5));
+console.log(numList.slice(2, 4));
+
+// console.log(numList.slice(1));
+// console.log(numList.slice(3));
+// console.log(numList.slice());
+
+// console.log(numList.slice(-1));
+// console.log(numList.slice(-2));
+// console.log(numList.slice(-3));
+// console.log(numList.slice(-4));
+
+// const newNumList = numList.slice(-4);
+// console.log(newNumList);
+
+// console.log(numList);
+// const spliceArr = numList.splice(0, 2);
+// console.log(spliceArr);
+
+// console.log(numList.splice(0, 0, 1));
+// console.log(spliceArr);
+// console.log(numList);
+
+// console.log(numList.splice(7, 0, "8", "9"));
+// console.log(spliceArr);
+// console.log(numList);
+
+// console.log(numList.splice(3, 0, 9889));
+// console.log(spliceArr);
+// console.log(numList);
+
+// console.log(numList.splice(4, 0, "a"));
+// console.log(numList);
+
+// console.log(numList.splice(3, 1, "Js"));
+// console.log(numList);
+// console.log(numList.splice(3, 3, "alfa"));
+// console.log(numList);
+// console.log(numList.splice(3, 3, "BETA", "GAMMA"));
+// console.log(numList);
+
+// const arr1 = ["Hello"]
+// const arr2 = ["World!"]
+// const lang = arr1.concat(arr2);
+// console.log(lang.join(","));
+
+// const test1 = [4, 12, 6, 16, 13, 8, 13, 4, 15, 11, 14, 10, 15, 12];
+// const test2 = [17, 13, 4, 15, 10, 12, 16, 21, 13, 8, 14, 18, 15, 20];
+// const test3 = [20, 12, 16, 22, 13, 8, 13, 4, 15, 10, 14, 18, 15, 22];
+
+// const allTests = test1.concat(test2).concat(test3);
+// console.log(allTests.join(","));
+
+const add = function(a, b, c) {
+return a + b + c;  
+}
+
+const result = add(1, 2, 3);
+console.log(result);
+
+console.log(add(5, 10, 15));
+console.log(add(299, 14, 121));
+
+let myName;
+myName = "Renata";
+console.log(myName);
+
+const fnA = function() {
+  console.log('Начала выполняться [fnA]');
+  fnB();
+  console.log('Продолжила выполняться [fnA] после выхода из [fnB]');
+};
+
+const fnB = function() {
+  console.log('Выполняется [fnB]');
+};
+
+console.log('Начал выполнение [main]');
+fnA();
+console.log('Продолжил выполняться [main] после выхода из [fnA]');
+
+/*
+ * Начал выполнение [main]
+ * Начала выполняться [fnA]
+ * Выполняется [fnB]
+ * Продолжила выполняться [fnA] после выхода из [fnB]
+ * Продолжил выполняться [main] после выхода из [fnA]
+ */
 
