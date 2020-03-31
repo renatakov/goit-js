@@ -53,9 +53,11 @@ console.log(score);
 
 //                0,   1,  2,  3, 4, 5, 6, 7,   8,   9,   10,  11, 12
 const results = [ 12, 32, 15, 17, 3, 4, 98, 67, 532, 611, 7, 100, 42];
+console.log(results);
 const removeFromStart  = results.splice(0, 2);
+console.log(removeFromStart);
 const removeFromEnd = results.splice(8, 3);
-console.log(results)
+console.log(removeFromEnd);
 
 // ============== 4 ===============================================
 
