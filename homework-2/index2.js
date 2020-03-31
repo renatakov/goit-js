@@ -1,4 +1,4 @@
- "use strict";
+"use strict";
 
 // // const arr = [];
 // // console.log(arr);
@@ -232,11 +232,11 @@
 // //     console.log("its not a red fruit");
 // // }
 
-const numList = [0, 1, 2, 3, 4, 5, 6, 7];
-console.log(numList.slice(0, 3));
-console.log(numList.slice(1, 2));
-console.log(numList.slice(1, 5));
-console.log(numList.slice(2, 4));
+// const numList = [0, 1, 2, 3, 4, 5, 6, 7];
+// console.log(numList.slice(0, 3));
+// console.log(numList.slice(1, 2));
+// console.log(numList.slice(1, 5));
+// console.log(numList.slice(2, 4));
 
 // console.log(numList.slice(1));
 // console.log(numList.slice(3));

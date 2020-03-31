@@ -1,3 +1,5 @@
+"use strict";
+
 // ============== 1 ===============================================
 
 // Создай массив authors с именами авторов:
@@ -62,10 +64,62 @@ console.log(results)
 // из измененного массива results из задания 3 (т.е. все задание 3 и массив results должны быть 
 //раскомментированы)
 
-const partOfResults = [15, 17, 3, 4, 98, 67, 532, 611];
-console.log(partOfResults.slice(2, 7));
+const partOfResults = results.slice(3, 7);
 
 // ============== 5 ===============================================
 
 // Создай массив doubleResults и скопируй в него все элементы из измененного массива results из задания 3
 
+const doubleResults = results.slice(0, 8);
+
+// ============== 6 ===============================================
+
+// Перебери массив doubleResults из задания 5
+
+// Четные числа из массива запиши в новый массив evenResults, а
+
+// Нечетные - в oddResults
+
+// В обратной последовательности в обоих случаях
+
+// Выведи в консоль массивы evenResults и oddResults4
+
+const evenResults = doubleResults.slice(3, 5);
+evenResults.splice(2, 0, 532);
+console.log(evenResults);
+const oddResults = doubleResults.slice(0,3);
+oddResults.splice(3, 0, 67);
+oddResults.splice(4, 0, 611);
+console.log(oddResults);
+
+// ============== 7 ===============================================
+
+// Объедините массивы oddResults и evenResults из задания 6, записав их в новый массив AllResults
+
+// Перебери новый массив AllResults и выбери только те элементы массива, которые содержат 1 и запиши эти
+// элементы в новый массив includesOne
+
+// "обрати внимание, что массив includesOne должен содержать элемента с типом number, а не string!
+
+const AllResults = oddResults.concat(evenResults);
+console.log(AllResults);
+let includesOne = [];
+
+// for (let i = 0; i < AllResults.lenght; i += 1) {
+//     // let item = AllResults[i];
+//     // console.log(typeof item);
+//     let item = AllResults[i] + "";
+//     console.log(typeof item);
+//         if (item.includes(1)) {
+//        includesOne.push(+item);
+//         }
+// }
+
+for (let i = 0; i < AllResults.length; i += 1) {
+    let item = AllResults[i] + "";
+    console.log(typeof item);
+    if (item.includes(1)) {
+        includesOne.push(+item);
+    }
+}
+console.log(includesOne);
