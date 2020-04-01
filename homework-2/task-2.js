@@ -53,11 +53,11 @@ console.log(score);
 
 //                0,   1,  2,  3, 4, 5, 6, 7,   8,   9,   10,  11, 12
 const results = [ 12, 32, 15, 17, 3, 4, 98, 67, 532, 611, 7, 100, 42];
-console.log(results);
 const removeFromStart  = results.splice(0, 2);
-console.log(removeFromStart);
-const removeFromEnd = results.splice(8, 3);
-console.log(removeFromEnd);
+console.log(removeFromStart); // [12, 32]
+const removeFromEnd = results.splice(-3);
+console.log(removeFromEnd); // [7, 100, 42]
+console.log(results); // [15, 17, 3, 4, 98, 67, 532, 611]
 
 // ============== 4 ===============================================
 
@@ -66,14 +66,15 @@ console.log(removeFromEnd);
 // из измененного массива results из задания 3 (т.е. все задание 3 и массив results должны быть 
 //раскомментированы)
 
-const partOfResults = results.slice(3, 7);
+const partOfResults = results.slice(2, 7);
+console.log(partOfResults); // [3, 4, 98, 67, 532, 611]
 
 // ============== 5 ===============================================
 
 // Создай массив doubleResults и скопируй в него все элементы из измененного массива results из задания 3
 
-const doubleResults = results.slice(0, 8);
-
+const doubleResults = results.slice();
+console.log(doubleResults);
 // ============== 6 ===============================================
 
 // Перебери массив doubleResults из задания 5
@@ -86,13 +87,19 @@ const doubleResults = results.slice(0, 8);
 
 // Выведи в консоль массивы evenResults и oddResults4
 
-const evenResults = doubleResults.slice(3, 5);
-evenResults.splice(2, 0, 532);
-console.log(evenResults);
-const oddResults = doubleResults.slice(0,3);
-oddResults.splice(3, 0, 67);
-oddResults.splice(4, 0, 611);
+const evenResults = [];
+const oddResults = [];
+
+for (let i = 0; i < doubleResults.length; i += 1) {
+    console.log(doubleResults[i]);
+    if (doubleResults[i] % 2 === 0) {
+        evenResults.unshift(doubleResults[i]);
+    } else {
+        oddResults.unshift(doubleResults[i]);
+    }
+}
 console.log(oddResults);
+console.log(evenResults);
 
 // ============== 7 ===============================================
 
@@ -106,16 +113,6 @@ console.log(oddResults);
 const AllResults = oddResults.concat(evenResults);
 console.log(AllResults);
 let includesOne = [];
-
-// for (let i = 0; i < AllResults.lenght; i += 1) {
-//     // let item = AllResults[i];
-//     // console.log(typeof item);
-//     let item = AllResults[i] + "";
-//     console.log(typeof item);
-//         if (item.includes(1)) {
-//        includesOne.push(+item);
-//         }
-// }
 
 for (let i = 0; i < AllResults.length; i += 1) {
     let item = AllResults[i] + "";
