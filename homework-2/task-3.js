@@ -46,14 +46,6 @@
 
 // тут объяви функцию как FUNCTION EXPRESSION
 
-// const checkAge = function() {
-//              if (studentAge <= 18) {
-//                 alert("Here you are! You are got access!");
-//              } else {
-//                  alert("Sorry, you can't to get access");
-//              };
-// };
-// console.log(checkAge);
 // ARROW FUNCTION
 
 // тут объяви функцию как ARROW FUNCTION
