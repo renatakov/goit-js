@@ -46,16 +46,27 @@
 
 // тут объяви функцию как FUNCTION EXPRESSION
 
+let age;
+
+// const checkAge = function(age) {
+//     age = prompt("Введите возраст");
+//     if(age >= 18) {
+//         alert("Here you are! You are got access!");
+//     } else {
+//         alert("Sorry, you can't to get access");
+//     };
+// };
+
 // ARROW FUNCTION
 
 // тут объяви функцию как ARROW FUNCTION
 
- 
+const checkAge = (age) => (age = prompt("Введите возраст") >= 18)  ? alert("Here you are! You are got access!") : alert("Sorry, you can't to get access")
 
 // вызов функции
 
 // тут вызывай функцию
-
+checkAge();
  
 
 // ============== 3 ===========================
