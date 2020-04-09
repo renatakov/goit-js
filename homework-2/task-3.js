@@ -20,7 +20,6 @@
 // // вызов функции
 // // тут вызывай функцию
 // toPassTests();
-// console.log(toPassTests);
 
 // ============== 2 ===========================
 
@@ -93,8 +92,8 @@ checkAge();
 
 // const toGetCost = function(message, pricePerWord) {
 // let words = message.split(" ");
-// let countWords = word.length;
-// console.log(pricePerWord = countWords * +pricePerWord);
+// let countWords = words.length;
+// console.log(pricePerWord = countWords * pricePerWord);
 // }
 
 // // ARROW FUNCTION
@@ -131,33 +130,33 @@ checkAge();
 
 // а для индекса 2 выведет '3 - Ajax'.
 
-// let logItems = function(array) {
-//     for (let i = 0; i < array.lenght; i++){
-//         console.log(`${i+1} - ${array[i]}`);
-//     };
-// };
+let logItems = function(array) {
+    for (let i = 0; i < array.lenght; i++){
+        console.log(`${i+1} - ${array[i]}`);
+    };
+};
 
 // // // FUNCTION EXPRESSION
 
 // // Вызовы функции для проверки кода
 
-// logItems([
+logItems([
 
-//     "Wolverine",
+    "Wolverine",
     
-//     "Thor",
+    "Thor",
     
-//     "Iron Man",
+    "Iron Man",
     
-//     "Deadpool",
+    "Deadpool",
     
-//     "Nick Fury",
+    "Nick Fury",
     
-//     "Colossus"
+    "Colossus"
     
-//     ]);
+    ]);
     
-//     logItems([10, 20, 30, 40, 50, 60, 70, 80, 90, 100]);
+    logItems([10, 20, 30, 40, 50, 60, 70, 80, 90, 100]);
 // ============== 5 ===========================
 
 // Напиши функцию checkTheWord(message) как FUNCTION EXPRESSION и как ARROW FUNCTION,
@@ -180,8 +179,10 @@ checkAge();
 //     let words = message.split(" ");
 //     if (words.includes("lose") || words.includes("not")) {
 //         console.log(true);
-//     }
+//     } else {
+    // console.log(false);
 // }
+//}
  
 
 // ARROW FUNCTION
