@@ -204,3 +204,113 @@ poly1.attack(); // Poly attacks with sword
 
 poly1.gainXp();
 
+class Hero_1 {
+  constructor(name, xp) {
+    this.name = name;
+    this.xp = xp;
+  }
+}
+
+const newHero_1 = new Hero_1("Sonia", 1000);
+console.log(newHero_1);
+
+console.log("сравнение прототипа экземпляра и обЪекта функции-конструктора: ", newHero_1.__proto__ === Hero_1.prototype);
+
+class Hero_2 {
+  constructor(name, xp) {
+    this.name = name;
+    this.xp = xp;
+  }
+
+
+gainXp() {
+  console.log(`Hero ${this.name}, xp ${this.xp}`);
+  } // то же самое что и Hero.prototype.gainXp в ES5
+}
+
+const newHero_2 = new Hero_2("Sonia", 1000);
+console.log(newHero_2);
+
+class Hero_3 {
+  static staticProp = "abc";
+  static staticMethod() {}
+
+  constructor(name, xp) {
+    this.name = name;
+    this.xp = xp;
+  }
+
+  gainxp() {
+    console.log(`Hero ${this.name}, xp ${this.xp}`);
+  }
+}
+
+console.log(Hero_3.staticProp);
+console.log(Hero_3.staticMethod());
+
+const newHero_3 = new Hero_3("Sonia", 1000);
+console.log(newHero_3);
+
+class Hero_4 {
+  constructor(name, xp) {
+    this._name = name;
+    this.xp = xp;
+  }
+  // changeName(name) { // обычный метод
+  //   this._name = name;
+  // }
+  // getName() {  // обычный метод
+  //   return console.log(this.name);
+  // }
+  
+  // сеттер записывает
+  set name(newName) {
+    this._name = newName;
+  }
+  // геттер читает
+  get name() {
+    return console.log(this._name);
+  }
+}
+const newHero_4 = new Hero_4("Sonia", 1000);
+console.log(newHero_4);
+// newHero_4.changeName("Alf"); // обычный метод класса
+// newHero_4.getName(); // обычный метод класса
+newHero_4.name = "Drago"; // сеттер
+newHero_4.name; // геттер
+
+class Heroes {
+  constructor(name, xp) {
+    this.name = name;
+    this.xp = xp;
+  }
+  gainXp(amount) {
+    this.xp += amount;
+    console.log(`${this.name} gairned ${amount} experience points`);
+  }
+}
+class Warwar extends Heroes {
+  constructor(name, xp, weapon) {
+    super(name, xp);
+    this.weapon = weapon;
+  }
+  attack() {
+    console.log(`${this.name} attacs with ${this.name}`);
+  } 
+}
+const warwar = new Warwar("John", 10, "axe");
+console.log(warwar);
+
+warwar.gainXp(1000);
+console.log(warwar);
+
+warwar.attack();
+
+class Berserk extends Warwar {
+  constructor(roar) {
+    super(name, xp, weapon);
+    this.roar = roar;
+  }
+}
+const ggg = new Berserk(1);
+console.log(ggg);
